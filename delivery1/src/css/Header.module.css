@@ -1,0 +1,20 @@
+header{
+    position: fixed;
+    background: #3498DB;
+    width: 100%;
+    z-index: 1;
+    height: 40px;
+    display: flex;
+}
+nav{
+    position: absolute;
+    right: 20px;
+}
+
+
+
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
