@@ -32,20 +32,16 @@ form img{
     display: block;
     margin: 10px auto;
 }
-.menuButton{
-    position: relative;
-    box-sizing: border-box;
-    display: block;
+.menuButton{    
     font-size: 25px;
     color: white;
     cursor: pointer;
     background: #78c4f7;
 
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     font-weight: bolder;
-    
-    text-align: center;
-    
+    display: flex;
+    justify-content: center;
 }
