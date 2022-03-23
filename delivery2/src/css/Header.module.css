@@ -1,0 +1,51 @@
+header{
+    position: fixed;
+    background: #3498DB;
+    width: 100%;
+    z-index: 1;
+    height: 50px;
+    display: flex;
+}
+
+nav{
+    position: absolute;
+    display: flex;
+    right: 20px;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    
+}
+
+form{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+form input{
+    width: 250px;
+}
+
+form img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 10px auto;
+}
+.menuButton{
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    background: #78c4f7;
+
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-weight: bolder;
+    
+    text-align: center;
+    
+}
