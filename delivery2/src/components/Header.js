@@ -5,13 +5,14 @@ import React, {useState} from 'react';
 import { useCardContext } from "./CardContextProvider";
 
 function Header(){
+   
     const [showModal, setShowModal] = useState(false);
     const {pokeCards, setPokeCards} = useCardContext()
     const alterModal = () => setShowModal(!showModal);
     const addPoke = (e) =>{
         e.preventDefault()
         const name = e.target.name.value;
-        const newCard = <Card path="images/Pikachu.png" name={name} />
+        const newCard = <Card key={name} path="images/Pikachu.png" name={name} />
         setPokeCards([...pokeCards,newCard])
         alterModal()     
     }

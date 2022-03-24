@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from "react"
 import Card from "./Card";
 import style from "../css/PokemonList.module.css";
 import { useCardContext } from './CardContextProvider';
+import Pokemons from '../db.json'
 
 function PokemonList(){
     const {pokeCards, setPokeCards} = useCardContext();
@@ -11,9 +12,9 @@ function PokemonList(){
     'Kadabra.png',  'Kakuna.png', 'Metapod.png', 'Pidgeot.png', 'Pidgeotto.png','Pidgey.png', 
     'Pikachu.png',  'Ponyta.png', 'Raichu.png', 'Raticate.png', 'Rattata.png',  'Squirtle.png', 
     'Venusaur.png', 'Vulpix.png', 'Wartortle.png','Weedle.png']
-    
+    console.log(Pokemons.pokemons)
     useEffect(() =>{
-        setPokeCards(pokemonList.map(poke =><Card key={poke} name={poke.replace(/.png/g,"")} path={`images\\${poke}`}/> ))
+        setPokeCards(Pokemons.pokemons.map(({name}) =><Card key={name} name={name.replace(/.png/g,"")} path={`images\\${name}`}/> ))
     }, []);
 
     
