@@ -1,0 +1,35 @@
+{
+    "pokemons" : [
+            {"name":"Arcanine.png"},
+            {"name":"Beedrill.png"}, 
+            {"name":"Blastoise.png"},
+            {"name":"Bulbasaur.png"},
+            {"name":"Butterfree.png"},
+            {"name":"Caterpie.png"},
+            {"name":"Charizard.png"},
+            {"name":"Charmander.png"},
+            {"name":"Charmeleon.png"},
+            {"name":"Clefable.png"},
+            {"name":"Dewgong.png"},
+            {"name":"Farfetchd.png"},
+            {"name":"Golbat.png"},
+            {"name":"Ivysaur.png"}, 
+            {"name":"Kadabra.png"},
+            {"name":"Kakuna.png"},
+            {"name":"Metapod.png"},
+            {"name":"Pidgeot.png"},
+            {"name":"Pidgeotto.png"},
+            {"name":"Pidgey.png"}, 
+            {"name":"Pikachu.png"},
+            {"name":"Ponyta.png"},
+            {"name":"Raichu.png"},
+            {"name":"Raticate.png"},
+            {"name":"Rattata.png"}, 
+            {"name":"Squirtle.png"}, 
+            {"name":"Venusaur.png"}, 
+            {"name":"Vulpix.png"}, 
+            {"name":"Wartortle.png"},
+            {"name":"Weedle.png"}
+    ]
+}
+
