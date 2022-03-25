@@ -14,7 +14,7 @@ function App() {
         <Router>
           
           <Routes>
-          
+            
             <Route exact path='/' element={<PokemonList />}/>
             <Route path='detail' element={<Detail />} />
           </Routes>

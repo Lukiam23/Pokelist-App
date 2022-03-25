@@ -12,7 +12,7 @@ function Header(){
     const addPoke = (e) =>{
         e.preventDefault()
         const name = e.target.name.value;
-        const newCard = <Card key={name} path="images/Pikachu.png" name={name} />
+        const newCard = <Card key={name} pokemon={{name:name, path: "images/Pikachu.png"}} />
         setPokeCards([...pokeCards,newCard])
         alterModal()     
     }
