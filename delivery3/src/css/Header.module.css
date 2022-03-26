@@ -36,6 +36,10 @@ form img{
     font-size: 25px;
     color: white;
     cursor: pointer;
+    margin-right: 10px;
+}
+
+.frame{    
     background: #78c4f7;
 
     width: 40px;

@@ -3,25 +3,36 @@ import Modal from "./Modal";
 import Card from "./Card";
 import React, {useState} from 'react';
 import { useCardContext } from "./CardContextProvider";
+import { useNavigate } from 'react-router-dom'
+import cx from 'classnames'
 
 function Header(){
-   
+    const navigate = useNavigate()
     const [showModal, setShowModal] = useState(false);
     const {pokeCards, setPokeCards} = useCardContext()
     const alterModal = () => setShowModal(!showModal);
     const addPoke = (e) =>{
         e.preventDefault()
         const name = e.target.name.value;
-        const newCard = <Card key={name} pokemon={{name:name, path: "images/Pikachu.png"}} />
-        setPokeCards([...pokeCards,newCard])
+        const newCard = <Card key={name} pokemon={{name:name, path: "images/Pikachu.png", type:"Unkown"}} />
+        
+        setPokeCards((old)=>{
+            console.log([old,newCard])
+            return [old,newCard]
+        })
+        
         alterModal()     
+    }
+    const goHome = () =>{
+        navigate('/')
     }
 
     return(
         <>
         <header>
             <nav>
-                <div onClick={alterModal} className={style.menuButton}>+</div>
+                <div onClick={goHome} className={style.menuButton}>Home</div>
+                <div onClick={alterModal} className={cx(style.menuButton, style.frame)} >+</div>
             </nav>
         </header>
         {

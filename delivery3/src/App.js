@@ -10,8 +10,8 @@ function App() {
   
   return (
       <CardContextProvider>
-        <Header />
         <Router>
+        <Header />
           
           <Routes>
             

@@ -11,9 +11,16 @@
     text-align: center;
 }
 .frame img{
-    float: left;
+    display: block;
+    margin: 0 auto;
     width: 300px;
     height: 300px;
+}
+
+.frame p {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .frame{
@@ -24,7 +31,7 @@
     border-radius: 8px;
     
    
-    width: 800px;
+    width: 600px;
     height: 800px;
     background: white;
     
