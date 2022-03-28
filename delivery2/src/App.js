@@ -8,8 +8,8 @@ import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
 function App() {
   return (
       <CardContextProvider>
+        <Header />
         <Router>
-          <Header />
           
           <Routes>
             <Route path='detail' element={<Detail />}/>

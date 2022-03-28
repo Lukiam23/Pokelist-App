@@ -1,11 +1,14 @@
 import style from "../css/Header.module.css"
+
 function Header(){
     return(
+        <>
         <header>
             <nav>
-               <a href="/">Add Pokemon</a>
+                <div className={style.menuButton}>Add Pokemon</div>
             </nav>
         </header>
+        </>
     );
 }
 

@@ -1,0 +1,35 @@
+{
+    "pokemons" : [
+            {"name":"Arcanine", "path":"images/Arcanine.png", "type":"Fire"},
+            {"name":"Beedrill", "path":"images/Beedrill.png", "type":"Bug Poison"}, 
+            {"name":"Blastoise", "path":"images/Blastoise.png", "type":"Water"},
+            {"name":"Bulbasaur", "path":"images/Bulbasaur.png", "type":"Grass Poison"},
+            {"name":"Butterfree", "path":"images/Butterfree.png", "type":"Bug Flying"},
+            {"name":"Caterpie", "path":"images/Caterpie.png", "type":"Bug"},
+            {"name":"Charizard", "path":"images/Charizard.png", "type":"Fire Flying"},
+            {"name":"Charmander", "path":"images/Charmander.png", "type":"Fire"},
+            {"name":"Charmeleon", "path":"images/Charmeleon.png", "type":"Fire"},
+            {"name":"Clefable", "path":"images/Clefable.png", "type":"Fairy"},
+            {"name":"Dewgong", "path":"images/Dewgong.png", "type":"Water Ice"},
+            {"name":"Farfetchd", "path":"images/Farfetchd.png", "type":"Normal Flying"},
+            {"name":"Golbat", "path":"images/Golbat.png", "type":"Poison Flying"},
+            {"name":"Ivysaur", "path":"images/Ivysaur.png", "type":"Grass Poison"}, 
+            {"name":"Kadabra", "path":"images/Kadabra.png", "type":"Psychic"},
+            {"name":"Kakuna", "path":"images/Kakuna.png", "type":"Bug Poison"},
+            {"name":"Metapod", "path":"images/Metapod.png", "type":"Bug"},
+            {"name":"Pidgeot", "path":"images/Pidgeot.png", "type":"Normal Flying"},
+            {"name":"Pidgeotto", "path":"images/Pidgeotto.png", "type":"Normal Flying"},
+            {"name":"Pidgey", "path":"images/Pidgey.png", "type":"Normal Flying"}, 
+            {"name":"Pikachu", "path":"images/Pikachu.png", "type":"Eletric"},
+            {"name":"Ponyta", "path":"images/Ponyta.png", "type":"Fire"},
+            {"name":"Raichu", "path":"images/Raichu.png", "type":"Eletric"},
+            {"name":"Raticate", "path":"images/Raticate.png", "type":"Normal"},
+            {"name":"Rattata", "path":"images/Rattata.png", "type":"Normal"}, 
+            {"name":"Squirtle", "path":"images/Squirtle.png", "type":"Water"}, 
+            {"name":"Venusaur", "path":"images/Venusaur.png", "type":"Grass Poison"}, 
+            {"name":"Vulpix", "path":"images/Vulpix.png", "type":"Fire"}, 
+            {"name":"Wartortle", "path":"images/Wartortle.png", "type":"Water"},
+            {"name":"Weedle, ", "path":"images/Weedle.png", "type":"Bug Poison"}
+    ]
+}
+

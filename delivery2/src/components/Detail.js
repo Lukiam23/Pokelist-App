@@ -1,5 +1,7 @@
-function Detail(){
-    return <h1>Detail Page</h1>
+import style from "../css/Detail.module.css"
+
+function Detail({pokemon}){
+    return <div className={style.container} >Olá</div>
 }
 
 export default Detail;
