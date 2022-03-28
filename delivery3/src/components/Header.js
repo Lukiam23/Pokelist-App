@@ -1,10 +1,11 @@
 import style from "../css/Header.module.css";
 import Modal from "./Modal";
 import Card from "./Card";
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useCardContext } from "./CardContextProvider";
 import { useNavigate } from 'react-router-dom'
 import cx from 'classnames'
+
 
 function Header(){
     const navigate = useNavigate()
@@ -17,12 +18,12 @@ function Header(){
         const newCard = <Card key={name} pokemon={{name:name, path: "images/Pikachu.png", type:"Unkown"}} />
         
         setPokeCards((old)=>{
-            console.log([old,newCard])
-            return [old,newCard]
+            return [...old,newCard]
         })
-        
+
         alterModal()     
     }
+
     const goHome = () =>{
         navigate('/')
     }
