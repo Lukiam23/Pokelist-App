@@ -5,15 +5,13 @@ import { useCardContext } from './CardContextProvider';
 
 import { Route, Routes } from 'react-router-dom';
 import Detail from './Detail';
-import Data from '../db.json'
+import usePokemons from './usePokemons'
 
 
 
 function PokemonList(){
-    const {pokeCards, setPokeCards} = useCardContext(); 
-    const {pokemons} = Data;
-    
-    
+    const {pokeCards, setPokeCards} = useCardContext();
+    const [pokemons, errors] = usePokemons();      
 
     useEffect(() =>{
         if(pokemons && pokeCards.length === 0){
