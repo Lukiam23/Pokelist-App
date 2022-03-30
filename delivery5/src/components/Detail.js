@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useCardContext } from './CardContextProvider';
 import { useEffect, useMemo } from "react";
+import {DetailContainer, Frame} from './style';
 
 function Detail(){
     const {pokemonData} = useCardContext();
@@ -31,13 +32,15 @@ function Detail(){
     }
 
     return (
-    <div>
+    
+    <DetailContainer>
         <div>
-        <h1>{name}</h1>
-        <img src={path} alt={name} />
-        <p>The {name} is a pokemon from the {(types.length > 1)? "types": "type"} {printTypes()}</p>
+            <h1>{name}</h1>
+            <img src={path} alt={name} />
+            <p>The {name} is a pokemon from the {(types.length > 1)? "types": "type"} {printTypes()}</p>
         </div>
-    </div>);
+    </DetailContainer>
+   );
 }
 
 export default Detail;

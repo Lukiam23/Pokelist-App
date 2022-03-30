@@ -5,6 +5,7 @@ import { useCardContext } from './CardContextProvider';
 import { Route, Routes } from 'react-router-dom';
 import Detail from './Detail';
 import usePokemons from './usePokemons'
+import {CardContainer} from './style';
 
 
 
@@ -21,9 +22,9 @@ function PokemonList(){
 
     
     return(
-        <div id="cardContainer">
+        <CardContainer>
             {pokeCards}
-        </div>
+        </CardContainer>
         
     );
 }

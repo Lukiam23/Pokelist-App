@@ -1,0 +1,8 @@
+{
+    "plugins": [
+        "styled-components"
+    ],
+    "rules": {
+        "styled-components/rule-name": 2
+    }
+}

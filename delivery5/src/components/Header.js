@@ -1,14 +1,15 @@
 import Modal from "./Modal";
+import {HeaderStyle, MenuButton, ButtonFrame} from './style';
 import Card from "./Card";
 import React, {useEffect, useState} from 'react';
 import { useCardContext } from "./CardContextProvider";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 
 function Header(){
     const navigate = useNavigate()
     const [showModal, setShowModal] = useState(false);
-    const {pokeCards, setPokeCards} = useCardContext()
+    const {setPokeCards} = useCardContext()
     const alterModal = () => setShowModal(!showModal);
     const addPoke = (e) =>{
         e.preventDefault()
@@ -28,12 +29,13 @@ function Header(){
 
     return(
         <>
-        <header>
+        <HeaderStyle>
             <nav>
-                <div onClick={goHome} >Home</div>
-                <div onClick={alterModal} >+</div>
+                <MenuButton onClick={goHome} >Home</MenuButton>
+                <ButtonFrame onClick={alterModal} >+</ButtonFrame>
             </nav>
-        </header>
+        </HeaderStyle>
+
         {
             showModal? 
             <Modal>

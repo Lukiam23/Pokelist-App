@@ -1,6 +1,7 @@
 
 import { useNavigate } from 'react-router-dom'
 import { useCardContext } from './CardContextProvider';
+import {CardStyle} from './style';
 
 function Card({pokemon}){
     const {name, path} = pokemon;
@@ -14,10 +15,10 @@ function Card({pokemon}){
     }
     
     return(
-        <div  onClick={() => detailPage(pokemon)}>
+        <CardStyle  onClick={() => detailPage(pokemon)}>
             <img src={path} alt={name} />
             <p>{name}</p>
-        </div>
+        </CardStyle>
     );
 
 }
