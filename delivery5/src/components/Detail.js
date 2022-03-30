@@ -9,6 +9,7 @@ function Detail(){
     
     useEffect(() =>{
         if(pokemonData === undefined) navigate('/')
+        window.scrollTo(0, 0)
     }, [pokemonData, navigate])
     
     if(pokemonData === undefined) return null;

@@ -100,8 +100,8 @@ export const DetailContainer = styled.div`
         border-radius: 8px;
         
     
-        width: 600px;
-        height: 800px;
+        width: 500px;
+        height: 600px;
         background: white;
     }
 
@@ -125,6 +125,8 @@ export const DetailContainer = styled.div`
     }
 `;
 
+
+// Modal
 export const ModalStyle = styled.div`
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
