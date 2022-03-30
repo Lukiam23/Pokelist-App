@@ -1,7 +1,8 @@
 import React, {useRef, useEffect} from "react";
-import {createPortal} from 'react-dom'
+import {createPortal} from 'react-dom';
+import {ModalStyle} from './style';
 
-const Modal = ({children}) => {
+const Modal = ({children, closeModal}) => {
     const elRef =  useRef(null);
     if(!elRef.current){
         const div = document.createElement('div')
@@ -15,7 +16,7 @@ const Modal = ({children}) => {
          return () => modalRoot.removeChild(elRef.current)
     }, [])
 
-    return createPortal(<div>{children}</div>, elRef.current)
+    return createPortal(<ModalStyle onClick={closeModal}><div onClick={(event) => {event.stopPropagation()}}>{children}</div></ModalStyle>, elRef.current)
 }
 
 export default Modal;

@@ -124,3 +124,60 @@ export const DetailContainer = styled.div`
         margin-right: 50px;
     }
 `;
+
+export const ModalStyle = styled.div`
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    :empty{
+        display: none;
+    }
+
+    
+
+    div{
+        position: relative;
+        background-color: white;
+        display: block;
+        max-width: 500px;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+
+        span img{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 30px;
+            height: 30px;
+        }
+
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+
+        input{
+            margin: 10px auto;
+            display: block;
+        }
+
+        input[type=submit]{
+            background: #3498DB;
+            color:white;
+            border: none;
+            border-radius: 2px;
+            width: 50px;
+            height: 30px;
+        }
+    }
+
+`;

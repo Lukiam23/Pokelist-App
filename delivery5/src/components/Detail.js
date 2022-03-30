@@ -18,8 +18,8 @@ function Detail(){
     
     
     const printTypes = () =>{
-        let resp = ""
-        if(types.length === 1) return `${types[0]}.`
+        let resp = "types "
+        if(types.length === 1) return `type ${types[0]}.`
         for(let index = 0; index<types.length; index++){
             if(index === types.length - 1){
                 resp += `and ${types[index]}`
@@ -37,7 +37,7 @@ function Detail(){
         <div>
             <h1>{name}</h1>
             <img src={path} alt={name} />
-            <p>The {name} is a pokemon from the {(types.length > 1)? "types": "type"} {printTypes()}</p>
+            <p>The {name} is a pokemon from the {printTypes()}</p>
         </div>
     </DetailContainer>
    );
