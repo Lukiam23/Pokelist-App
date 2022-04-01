@@ -1,17 +1,15 @@
+import React from 'react';
 import { render, screen, fireEvent  } from "@testing-library/react"
 import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
-import {createPortal} from 'react-dom';
-import MockCardContextPovider,{MockUseCardContext} from '../__mocks__/MockCardContextPovider.js';
+import CardContextProvider,{CardContext} from '../components/CardContextProvider';
 import Detail from '../components/Detail'
-import React from 'react';
 
-jest.mock("../components/CardContextProvider.js",() => ({
-    ...jest.requireActual("../components/CardContextProvider.js"),
-    useCardContext: MockUseCardContext,
-}))
 
-describe('Testing Header Component', () =>{
-    beforeEach(() => {
+
+const pokemonData = {name:'bulbasor', path:'image/bulbasor.png', type:'plant'}
+
+describe('Testing Detail Component', () =>{
+    beforeEach(() => {  
         window.scrollTo = jest.fn();
     });
 
@@ -19,15 +17,21 @@ describe('Testing Header Component', () =>{
         jest.clearAllMocks();
     })
 
-    it('Testing Det6ail Component', async() =>{
+    it('Testing Detail Component', async() =>{
         render(
-            <MockCardContextPovider>
+            <CardContext.Provider value={{pokemonData}}>
                 <Router>
                     <Detail />
                 </Router>
-            </MockCardContextPovider>
+            </CardContext.Provider>
         );
-        
+
+        const detail = screen.getByTestId('detail')
+        const children = detail.childNodes;
+        expect(children[0].textContent).toBe('bulbasor');
+        expect(children[1].src).toContain('image/bulbasor.png');
+        expect(children[1].alt).toBe('bulbasor');
+        expect(children[2].textContent).toContain('bulbasor');
 
     })
 

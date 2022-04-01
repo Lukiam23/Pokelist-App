@@ -1,6 +1,6 @@
 import { useState, useContext, createContext } from "react";
 
-const CardContext = createContext();
+export const CardContext = createContext();
 
 export default function CardContextProvider({children}){
 

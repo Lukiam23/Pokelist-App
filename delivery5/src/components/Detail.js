@@ -1,14 +1,12 @@
 import { useNavigate } from 'react-router-dom'
-import { useCardContext } from './CardContextProvider';
-import { useEffect, useMemo } from "react";
+import { CardContext } from './CardContextProvider';
+import { useEffect, useMemo, useContext } from "react";
 import {DetailContainer, Frame} from './style';
 
 
 function Detail(){
-
-    const {pokemonData} = useCardContext();
+    const {pokemonData} = useContext(CardContext);
     let navigate = useNavigate();
-    useCardContext();
     
     useEffect(() =>{
         if(pokemonData === undefined) navigate('/')

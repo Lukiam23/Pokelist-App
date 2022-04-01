@@ -1,9 +1,9 @@
 import { useState, useContext, createContext } from "react";
 import Card from "../components/Card";
 
-export const MockCardContext = createContext();
+const MockCardContext = createContext();
 
-export default function MockCardContextPovider({children}){
+function MockProvider({children}){
 
 	const [pokemonData, setPokemonData] = useState({name:'bulbasor', path:'image/bulbasor.png', type:'plant'});
     const [pokeCards, setPokeCards] = useState([<Card pokemon={{name:'bulbasor', path:'image/bulbasor.png', type:'plant'}} />])
@@ -16,6 +16,9 @@ export default function MockCardContextPovider({children}){
 
 }
 
-export function MockUseCardContext(){
+function useCardContext(){
+
 	return useContext(MockCardContext)
 }
+
+export {MockProvider};

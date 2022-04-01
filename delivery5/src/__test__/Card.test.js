@@ -6,7 +6,7 @@ import Card from '../components/Card'
 import React from 'react';
 
 
-describe('Testing Header Component', () =>{
+describe('Testing Detail Component', () =>{
 
 
     it('Testing Card Component', async() =>{
