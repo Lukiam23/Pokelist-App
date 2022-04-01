@@ -3,9 +3,12 @@ import { useCardContext } from './CardContextProvider';
 import { useEffect, useMemo } from "react";
 import {DetailContainer, Frame} from './style';
 
+
 function Detail(){
+
     const {pokemonData} = useCardContext();
     let navigate = useNavigate();
+    useCardContext();
     
     useEffect(() =>{
         if(pokemonData === undefined) navigate('/')
@@ -35,7 +38,7 @@ function Detail(){
     return (
     
     <DetailContainer>
-        <div>
+        <div data-testid="detail">
             <h1>{name}</h1>
             <img src={path} alt={name} />
             <p>The {name} is a pokemon from the {printTypes()}</p>

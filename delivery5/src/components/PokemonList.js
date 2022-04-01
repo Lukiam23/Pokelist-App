@@ -22,7 +22,7 @@ function PokemonList(){
 
     
     return(
-        <CardContainer>
+        <CardContainer data-testid="cardContainer">
             {pokeCards}
         </CardContainer>
         

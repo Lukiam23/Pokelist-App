@@ -15,7 +15,7 @@ function Card({pokemon}){
     }
     
     return(
-        <CardStyle  onClick={() => detailPage(pokemon)}>
+        <CardStyle data-testid="card" onClick={() => detailPage(pokemon)}>
             <img src={path} alt={name} />
             <p>{name}</p>
         </CardStyle>

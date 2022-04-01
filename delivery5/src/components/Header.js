@@ -33,8 +33,8 @@ function Header(){
         <>
         <HeaderStyle>
             <nav>
-                <MenuButton onClick={goHome} >Home</MenuButton>
-                <ButtonFrame onClick={alterModal} >+</ButtonFrame>
+                <MenuButton onClick={goHome} data-testid="home-button">Home</MenuButton>
+                <ButtonFrame onClick={alterModal} data-testid="add-button">+</ButtonFrame>
             </nav>
         </HeaderStyle>
 
@@ -42,10 +42,16 @@ function Header(){
             showModal? 
             <Modal closeModal={alterModal}>
                 <span onClick={alterModal} ><img src="close.png"/></span>
-                <form onSubmit={e => addPoke(e)} encType="multipart/form-data">
+                <form 
+                onSubmit={e => addPoke(e)} 
+                encType="multipart/form-data">
                     <img src="images/Pikachu.png" alt="default"/>
-                    <input type="text" id="name" placeholder="Pokemon's name"/>
-                    <input type="submit" />
+                    <input 
+                    data-testid="pokemon-name"
+                    type="text" 
+                    id="name" 
+                    placeholder="Pokemon's name"/>
+                    <input data-testid="submit" type="submit" />
                 </form>
             </Modal> : null
         }
