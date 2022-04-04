@@ -1,10 +1,19 @@
 import './App.css';
-import PokemonList from './components/PokemonList'
+import Loadable from 'react-loadable';
+
 import Header from './components/Header'
 import CardContextProvider from './components/CardContextProvider';
-import Detail from './components/Detail';
-import {BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
-import { useState } from 'react';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+const LoadablePokemonList = Loadable({
+  loader: () => import('./components/PokemonList'),
+  loading(){ return <h1>Loading</h1>}
+})
+
+const LoadableDetail = Loadable({
+  loader: () => import('./components/Detail'),
+  loading(){ return <h1>Loading</h1>}
+})
 
 function App() {
   
@@ -15,8 +24,8 @@ function App() {
           
           <Routes>
             
-            <Route exact path='/' element={<PokemonList />}/>
-            <Route path='detail' element={<Detail />} />
+            <Route exact path='/' element={<LoadablePokemonList />}/>
+            <Route path='detail' element={<LoadableDetail />} />
           </Routes>
         </Router>
       </CardContextProvider>
