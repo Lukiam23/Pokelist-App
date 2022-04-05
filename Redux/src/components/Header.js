@@ -1,8 +1,8 @@
 import Modal from "./Modal";
 import {HeaderStyle, MenuButton, ButtonFrame} from './style';
 import Card from "./Card";
-import React, {useEffect, useState} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import React, {useState} from 'react';
+import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import addCard from '../actionCreators/addCard'
 
@@ -34,7 +34,7 @@ function Header(){
         <HeaderStyle>
             <nav>
                 <MenuButton onClick={goHome} data-testid="home-button">Home</MenuButton>
-                <ButtonFrame onClick={alterModal} data-testid="add-button">+</ButtonFrame>
+                <MenuButton onClick={alterModal} data-testid="add-button">+</MenuButton>
             </nav>
         </HeaderStyle>
 

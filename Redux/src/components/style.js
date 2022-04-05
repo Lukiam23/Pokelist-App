@@ -11,11 +11,10 @@ export const HeaderStyle = styled.header`
     display: flex;
     min-height: 60px;
     
-
     nav {
         position: absolute;
         display: flex;
-        right: 20px;
+        right: 0px;
         height: 100%;
         
         text-align: center;
@@ -27,7 +26,19 @@ export const MenuButton = styled.div`
     font-size: 25px;
     color: white;
     cursor: pointer;
-    margin-right: 10px;
+    min-width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: solid 2px black;
+    
+
+    :hover{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
 `;
 
 export const ButtonFrame = styled(MenuButton)`
