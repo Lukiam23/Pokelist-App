@@ -12,7 +12,7 @@ function Detail(){
         if(pokemonData === undefined || Object.keys(pokemonData).length === 0 || pokemonData === null ) navigate('/');
     }, [])
 
-    const {name, path, type} = pokemonData;
+    const {name, path} = pokemonData;
 
     if(pokemonData === undefined || Object.keys(pokemonData).length === 0 || pokemonData === null ) return null;
     

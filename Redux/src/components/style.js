@@ -95,12 +95,13 @@ export const CardStyle = styled.div`
     }
 `;
 
-//PokemonList styling
+//Home styling
 
 export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: 100%;
     padding-top: 80px;
     justify-content: center;
 `;
@@ -108,11 +109,13 @@ export const CardContainer = styled.div`
 //Detail styling
 
 export const DetailContainer = styled.div`
+position: absolute;
     width: 100%;
     height: 100%;
     padding-top: 80px;
     padding-bottom: 50px;
     background: rgb(224, 217, 217);
+
 
     div {
         display: block;
