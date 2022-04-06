@@ -29,7 +29,7 @@
             {"name":"Venusaur", "path":"images/Venusaur.png", "type":"Grass Poison"}, 
             {"name":"Vulpix", "path":"images/Vulpix.png", "type":"Fire"}, 
             {"name":"Wartortle", "path":"images/Wartortle.png", "type":"Water"},
-            {"name":"Weedle, ", "path":"images/Weedle.png", "type":"Bug Poison"}
+            {"name":"Weedle ", "path":"images/Weedle.png", "type":"Bug Poison"}
     ]
 }
 

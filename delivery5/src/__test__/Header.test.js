@@ -24,6 +24,7 @@ describe('Testing Header Component', () =>{
         fireEvent.change(pokemonName,{target:{value:"Newmon"}})
         const submit = screen.getByTestId('submit')
         fireEvent.click(submit)
+        
 
         const homeButton = screen.getByTestId('home-button');
         expect(homeButton).toBeInTheDocument();

@@ -1,9 +1,21 @@
-import Modal from "./Modal";
+
 import {HeaderStyle, MenuButton, ButtonFrame} from './style';
-import Card from "./Card";
-import React, {useEffect, useState} from 'react';
+import Loadable from "react-loadable";
+
+import React, {useState} from 'react';
 import { useCardContext } from "./CardContextProvider";
 import { useNavigate } from 'react-router-dom';
+
+
+const Card = Loadable({
+    loader:() => import('./Card'),
+    loading(){ return <h1>Loading</h1>}
+})
+
+const Modal = Loadable({
+    loader:() => import('./Modal'),
+    loading(){ return <h1>Loading</h1>}
+})
 
 
 function Header(){
@@ -41,7 +53,7 @@ function Header(){
         {
             showModal? 
             <Modal closeModal={alterModal}>
-                <span onClick={alterModal} ><img src="close.png"/></span>
+                <span onClick={alterModal} ><img src="close.png" alt="close button"/></span>
                 <form 
                 onSubmit={e => addPoke(e)} 
                 encType="multipart/form-data">

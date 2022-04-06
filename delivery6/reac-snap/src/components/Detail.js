@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { CardContext } from './CardContextProvider';
-import { useEffect, useMemo, useContext } from "react";
-import {DetailContainer, Frame} from './style';
+import { useEffect, useContext } from "react";
+import {DetailContainer} from './style';
 
 
 function Detail(){
