@@ -1,14 +1,12 @@
 import { useEffect } from "react"
 import Card from "./Card";
-import { Route, Routes } from 'react-router-dom';
-import Detail from './Detail';
-import usePokemons from './usePokemons'
+import usePokemons from '../fetchs/usePokemons'
 import {CardContainer} from './style';
 import {useSelector, useDispatch} from 'react-redux';
 import addCard from '../actionCreators/addCard'
 
 
-function PokemonList(){
+function Home(){
     const pokeCards = useSelector(state => state.cards);
     const dispatch = useDispatch();
     const setPokeCards = (card) => dispatch(addCard(card));
@@ -16,7 +14,7 @@ function PokemonList(){
 
     useEffect(() =>{
         if(pokemons && pokeCards.length === 0){
-            setPokeCards(pokemons.map((pokemon) =><Card key={pokemon.name} pokemon={pokemon}/> ))
+            setPokeCards(pokemons.map((pokemon) =><Card key={pokemon.name} pokemon={pokemon} /> ))
         }
          
     }, [pokemons,setPokeCards]);
@@ -30,4 +28,4 @@ function PokemonList(){
     );
 }
 
-export default PokemonList;
+export default Home;

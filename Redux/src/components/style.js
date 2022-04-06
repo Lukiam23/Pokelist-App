@@ -14,7 +14,7 @@ export const HeaderStyle = styled.header`
     nav {
         position: absolute;
         display: flex;
-        right: 0px;
+        right: 5px;
         height: 100%;
         
         text-align: center;
@@ -33,24 +33,19 @@ export const MenuButton = styled.div`
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-    border-left: solid 2px black;
+    /* border-left: solid 2px black; */
+
+    img{
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
     
 
     :hover{
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
-`;
-
-export const ButtonFrame = styled(MenuButton)`
-    background: #78c4f7;
-
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-weight: bolder;
-    display: flex;
-    justify-content: center;
-
 `;
 
 //Card styling

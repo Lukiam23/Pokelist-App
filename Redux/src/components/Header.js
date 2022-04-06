@@ -33,8 +33,8 @@ function Header(){
         <>
         <HeaderStyle>
             <nav>
-                <MenuButton onClick={goHome} data-testid="home-button">Home</MenuButton>
-                <MenuButton onClick={alterModal} data-testid="add-button">+</MenuButton>
+                <MenuButton onClick={goHome} data-testid="home-button"><img src="home.png" alt="home button" title="Home" /></MenuButton>
+                <MenuButton onClick={alterModal} data-testid="add-button"><img src="add.png" alt="add button" title="Add pokemon"/></MenuButton>
             </nav>
         </HeaderStyle>
 
