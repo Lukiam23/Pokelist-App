@@ -3,6 +3,8 @@ import styled from "styled-components";
 //Header styling
 
 export const HeaderStyle = styled.header`
+    @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
     position:fixed;
     background: #3498DB;
     width: 100%;
@@ -19,6 +21,19 @@ export const HeaderStyle = styled.header`
         
         text-align: center;
         align-items: center;
+    }
+
+    h1{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        color: white;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    div{
+        cursor: pointer;
     }
 `;
 

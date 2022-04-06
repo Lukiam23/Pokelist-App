@@ -32,6 +32,7 @@ function Header(){
     return(
         <>
         <HeaderStyle>
+            <div onClick={goHome}><h1>Pokedex</h1></div>
             <nav>
                 <MenuButton onClick={goHome} data-testid="home-button"><img src="home.png" alt="home button" title="Home" /></MenuButton>
                 <MenuButton onClick={alterModal} data-testid="add-button"><img src="add.png" alt="add button" title="Add pokemon"/></MenuButton>
